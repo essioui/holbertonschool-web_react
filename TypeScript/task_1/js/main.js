@@ -31,3 +31,21 @@ var printTeacher = function (firstName, lastName) {
     return "".concat(firstName.charAt(0), ". ").concat(lastName);
 };
 console.log(printTeacher("John", "Doe"));
+console.log("-------------------------");
+console.log("4. Writing a class");
+var StudentClass = /** @class */ (function () {
+    function StudentClass(fistName, lastName) {
+        this.firstName = fistName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomework = function () {
+        return "Currently working";
+    };
+    StudentClass.prototype.displayName = function () {
+        return this.firstName;
+    };
+    return StudentClass;
+}());
+var student = new StudentClass("John", "Doe");
+console.log(student.displayName()); // John
+console.log(student.workOnHomework());

@@ -62,3 +62,32 @@ console.log(printTeacher("John", "Doe"));
 console.log("-------------------------");
 console.log("4. Writing a class");
 
+interface StudentClassConstructor {
+  new(firstName: string, lastName: string): StudentClassConstructor;
+}
+
+interface StudentClassInterface {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+
+class StudentClass implements StudentClassInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(fistName: string, lastName: string) {
+    this.firstName = fistName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
