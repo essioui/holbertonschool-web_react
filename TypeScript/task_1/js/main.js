@@ -15,6 +15,8 @@ var teacher4 = {
 };
 teacher4.location = "USA";
 console.log(teacher4);
+console.log("--------------------------------");
+console.log("2. Extending the Teacher class");
 var director1 = {
     firstName: "John",
     lastName: "Doe",
@@ -23,3 +25,9 @@ var director1 = {
     numberOfReports: 17,
 };
 console.log(director1);
+console.log("------------------------------------------");
+console.log("3. Printing teachers");
+var printTeacher = function (firstName, lastName) {
+    return "".concat(firstName.charAt(0), ". ").concat(lastName);
+};
+console.log(printTeacher("John", "Doe"));
