@@ -34,9 +34,9 @@ function createEmployee(salary) {
         return new Director();
     }
 }
-//console.log(createEmployee(200));
-//console.log(createEmployee(1000));
-//console.log(createEmployee('$500'));
+console.log(createEmployee(200));
+console.log(createEmployee(1000));
+console.log(createEmployee('$500'));
 console.log("------------------------------------------");
 console.log("6. Creating functions specific to employees");
 function isDirector(employee) {
@@ -52,3 +52,15 @@ function executeWork(employee) {
 }
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+console.log("----------------------------------");
+console.log("7. String literal types");
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else if (todayClass = 'History') {
+        return "Teaching History";
+    }
+}
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
